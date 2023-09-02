@@ -9,7 +9,7 @@ chmod 0755 -R /data/data/ph.sticknologic.com.laraide/usr/lib/git/*
 sed -i /^git/d /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall
 sed -i '/^if \[ "$1" = "git" \]/d' /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall
 sed -i 's@" # add package here@git\n" # add package here@g' /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall
-sed -i 's@" # add uninstaller here@if [ "$1" = "git" ]; then sed -i /^git/d /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall; sed -i '/^if \[ "$1" = "git" \]/d' /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall; rm -frv /data/data/ph.sticknologic.com.laraide/usr/lib/git; sed -i /^GIT_/d /data/data/ph.sticknologic.com.laraide/usr/etc/.bashrc; fi echo successflly uninstalled \n" # add package here@g' /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall
+sed -i 's@# add uninstaller here@if [ "$1" = "git" ]; then sed -i /^git/d /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall; sed -i '/^if \[ "$1" = "git" \]/d' /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall; rm -frv /data/data/ph.sticknologic.com.laraide/usr/lib/git; sed -i /^GIT_/d /data/data/ph.sticknologic.com.laraide/usr/etc/.bashrc; fi echo successflly uninstalled \n# add uninstaller here@g' /data/data/ph.sticknologic.com.laraide/usr/bin/uninstall
 # # # # # # # # # # # # #
 # creating github env
 echo 'GIT_EDITOR=nano' >> /data/data/ph.sticknologic.com.laraide/usr/etc/.bashrc
