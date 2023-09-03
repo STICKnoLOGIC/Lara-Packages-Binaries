@@ -2,7 +2,7 @@
 
 [ Binary Version: 2.42.0 ]
 
-[ Build Version: 0.0.3b ]
+[ Build Version: 0.0.3a ]
 
 Git is a fast, scalable, distributed revision control system with an unussually rich command set that provides both high-level operations and full access to internals.
 
