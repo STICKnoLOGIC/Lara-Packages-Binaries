@@ -1,0 +1,22 @@
+# Author: STICKnoLOGIC
+# Built Date: 09-03-23
+if [ ! -e '/data/data/ph.sticknologic.com.laraide/usr/lib/core' ]; then mkdir -p /data/data/ph.sticknologic.com.laraide/usr/lib/core; fi
+mv -fv phpactor /data/data/ph.sticknologic.com.laraide/usr/lib/core
+mv -fv tar /data/data/ph.sticknologic.com.laraide/usr/lib/core
+mv -fv curl /data/data/ph.sticknologic.com.laraide/usr/lib/core
+mv -fv gzip /data/data/ph.sticknologic.com.laraide/usr/lib/core
+mv -fv gunzip /data/data/ph.sticknologic.com.laraide/usr/lib/core
+mv -fv bash /data/data/ph.sticknologic.com.laraide/usr/lib/core
+mv -fv zip /data/data/ph.sticknologic.com.laraide/usr/lib/core
+mv -fv coreutils /data/data/ph.sticknologic.com.laraide/usr/lib/core
+chmod -R 0755 /data/data/ph.sticknologic.com.laraide/usr/lib/core/*
+mkdir dc
+tar -xfv -C dc php.tar.gz
+tar -xfv -C dc nano.tar.gz
+for entry in  'ls ./dc'; do
+if [ -d "./dc/" ]; then
+cp -rv ./dc/ /data/data/ph.sticknologic.com.laraide/usr && rm -rv ./dc/ 
+else
+mv -fv ./dc/ /data/data/ph.sticknologic.com.laraide/usr/lib/core
+fi
+chmod -R 755 /data/data/ph.sticknologic.com.laraide/usr/lib/core/*
